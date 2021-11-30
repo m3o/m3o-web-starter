@@ -10,11 +10,15 @@ export const User: FC = () => {
     return <p>loading...</p>
   }
 
-  return user ? (
-    <button className="m3o-button" onClick={logout}>
-      Logout
-    </button>
-  ) : (
+  if (user) {
+    return (
+      <button className="m3o-button" onClick={logout}>
+        Logout
+      </button>
+    )
+  }
+
+  return (
     <Link href="/login">
       <a className="m3o-button">Login</a>
     </Link>
