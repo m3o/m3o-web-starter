@@ -1,0 +1,18 @@
+.root {
+  border-bottom: 1px solid var(--m3o-gray);
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.homeLink {
+  font-weight: bold;
+  font-size: 0.9rem;
+}

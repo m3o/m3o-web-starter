@@ -1,4 +1,4 @@
-import type { ReactElement } from 'react'
+import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import {
   UserSignUp,
@@ -8,8 +8,9 @@ import {
   UserPasswordField
 } from '@m3o/nextjs'
 import styles from '../styles/SignUp.module.css'
+import { MainLayout } from '../components/MainLayout'
 
-export default function SignUp(): ReactElement {
+const SignUp: NextPage = () => {
   const router = useRouter()
 
   function onSignUp() {
@@ -17,13 +18,17 @@ export default function SignUp(): ReactElement {
   }
 
   return (
-    <div className="full-page-container">
-      <UserSignUp onSignUp={onSignUp} className={styles.signUp}>
-        <UserFirstNameField />
-        <UserLastNameField />
-        <UserEmailField />
-        <UserPasswordField />
-      </UserSignUp>
-    </div>
+    <MainLayout>
+      <div className="full-page-container">
+        <UserSignUp onSignUp={onSignUp} className={styles.signUp}>
+          <UserFirstNameField />
+          <UserLastNameField />
+          <UserEmailField />
+          <UserPasswordField />
+        </UserSignUp>
+      </div>
+    </MainLayout>
   )
 }
+
+export default SignUp
