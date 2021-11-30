@@ -6,8 +6,9 @@ import styles from '../styles/Login.module.css'
 export default function Login(): ReactElement {
   const router = useRouter()
 
-  function onSuccessfulLogin() {
-    // Add your code here. When successfully logged in the user will now be available in the provider
+  function onSuccessfulLogin(): void {
+    /* Add your code here. When successfully logged in the user
+    will be available in the <UserProvider /> via the useUser() hook */
     router.push('/')
   }
 
