@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useUser } from '@m3o/nextjs'
+import { useUser } from '@m3o/nextjs/user'
 import { useRouter } from 'next/router'
 
 export function useAuth() {

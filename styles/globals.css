@@ -24,3 +24,9 @@ a {
   align-items: center;
   background: #f9f9f9;
 }
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 90%;
+}

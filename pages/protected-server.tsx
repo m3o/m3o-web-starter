@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { withAuth } from '@m3o/nextjs'
+import { withAuth } from '@m3o/nextjs/user/server'
 
 /**
  * This is an example of the route being blocked by the server.

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { UserSignIn } from '@m3o/nextjs'
+import { UserSignIn } from '@m3o/nextjs/user/client'
 import { MainLayout } from '../components/MainLayout'
 import styles from '../styles/Login.module.css'
 

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { UserResetPassword } from '@m3o/nextjs'
+import { UserResetPassword } from '@m3o/nextjs/user/client'
 import { MainLayout } from '../components/MainLayout'
 import styles from '../styles/ResetPassword.module.css'
 

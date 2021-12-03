@@ -6,7 +6,7 @@ import {
   UserLastNameField,
   UserEmailField,
   UserPasswordField
-} from '@m3o/nextjs'
+} from '@m3o/nextjs/user/client'
 import styles from '../styles/SignUp.module.css'
 import { MainLayout } from '../components/MainLayout'
 
