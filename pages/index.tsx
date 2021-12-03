@@ -1,9 +1,22 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetServerSideProps } from 'next'
+import type { Example } from 'lib/types'
 import Head from 'next/head'
 import { MainLayout } from '../components/MainLayout'
-import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+interface Props {
+  examples: Example[]
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const response = await fetch('http://localhost:3000/api/examples')
+  const examples = (await response.json()) as Example[]
+
+  return {
+    props: { examples }
+  }
+}
+
+const Home: NextPage<Props> = ({ examples }) => {
   return (
     <MainLayout>
       <Head>
@@ -15,10 +28,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">
-        <h1>Welcome to the M3O Starter Kit</h1>
-        <h2 className={styles.subTitle}>
-          M3O provides the next generation of building blocks for applications.{' '}
-        </h2>
+        <div>
+          {examples.map(example => (
+            <div key={example.id}>
+              <h3>{example.title}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </MainLayout>
   )

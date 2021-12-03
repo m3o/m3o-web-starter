@@ -1,16 +1,10 @@
 .root {
   border-bottom: 1px solid var(--m3o-gray);
   background-color: #fff;
-}
-
-.container {
-  max-width: 1240px;
-  width: 90%;
-  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
 }
 
 .homeLink {
