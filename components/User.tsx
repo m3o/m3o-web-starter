@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import Link from 'next/link'
-import { useUser, useLogout } from '@m3o/nextjs'
+import { useUser, useLogout } from '@m3o/nextjs/user/client'
 
 export const User: FC = () => {
   const { user, isAuthenticating } = useUser()
@@ -12,7 +12,7 @@ export const User: FC = () => {
 
   if (user) {
     return (
-      <button className="m3o-button" onClick={logout}>
+      <button className="btn" onClick={logout}>
         Logout
       </button>
     )
@@ -20,7 +20,7 @@ export const User: FC = () => {
 
   return (
     <Link href="/login">
-      <a className="m3o-button">Login</a>
+      <a className="btn">Login</a>
     </Link>
   )
 }

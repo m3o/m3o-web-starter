@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app'
-import { UserProvider } from '@m3o/nextjs'
-import '@m3o/nextjs/m3o-next.css'
+import { UserProvider } from '@m3o/nextjs/user/client'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
